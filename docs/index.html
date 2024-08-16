@@ -46,6 +46,9 @@
 	</header>
 	<!-- end header -->
 
+	
+	
+
 	<!-- start main screen -->
 	<section class="main-screen">
 		<div class="container-fluid">
@@ -169,7 +172,9 @@ REGION
 	<!-- end what is section -->
 
 	<!-- start join us section -->
-	<section class="section">
+	<section class="section join-us">
+		<img src="img/pattern1.svg" alt="" class="triangle triangle1">
+		<img src="img/pattern2.svg" alt="" class="triangle triangle2">
 		<div class="container-fluid">
 			<h2 class="h2">
 				JOIN US TO EXPLORE
@@ -213,6 +218,7 @@ REGION
 
 		<!-- start who-meet section -->
 		<section class="section who-meet">
+			
 			<div class="container-fluid">
 	
 				<div class="section-header">
@@ -300,80 +306,125 @@ REGION
 					</p>
 				</div>
 
-				<form action="" class="form">
+				<form action="send_email.php" method="POST" class="form">
 					<div class="form-row">
-
 						<div class="form-col">
-
 							<div class="input-item">
-								<label for="" class="label">
-								Name*
-								</label>
-							<input type="text" class="input">
+								<label for="name" class="label">Name*</label>
+								<input type="text" class="input" name="name" required>
 							</div>
-
 							<div class="input-item">
-								<label for="" class="label">
-									E-mail*
-								</label>
-							<input type="text" class="input">
+								<label for="email" class="label">E-mail*</label>
+								<input type="email" class="input" name="email" required>
 							</div>
-
 							<div class="input-item">
-								<label for="" class="label">
-									Phone*
-								</label>
-							<input type="text" class="input">
+								<label for="phone" class="label">Phone*</label>
+								<input type="text" class="input" name="phone" required>
 							</div>
-							
-
 						</div>
-
+				
 						<div class="form-col">
-
 							<div class="input-item">
-								<label for="" class="label">
-									Job Title*
-								</label>
-							<input type="text" class="input">
+								<label for="job_title" class="label">Job Title*</label>
+								<input type="text" class="input" name="job_title" required>
 							</div>
-
 							<div class="input-item">
-								<label for="" class="label">
-									Company Name*
-								</label>
-							<input type="text" class="input">
+								<label for="company_name" class="label">Company Name*</label>
+								<input type="text" class="input" name="company_name" required>
 							</div>
-
 							<div class="input-item">
-								<label for="" class="label">
-									Current Business Location*
-								</label>
-							<select name="" id="" class="select">
-								<option value="">select</option>
-								<option value="">select</option>
-								<option value="">select</option>
-							</select>
+								<label for="location" class="label">Current Business Location*</label>
+								<select name="location" id="location" class="select" required>
+									<option value="">Select</option>
+									<option value="Location 1">Location 1</option>
+									<option value="Location 2">Location 2</option>
+								</select>
 							</div>
-							
-
 						</div>
-
-					
-
-						
-
 					</div>
+				
+					<div class="checkbox-row">
+						<div class="checkbox-wrapper">
+							<input type="checkbox" id="consent" class="input-checkbox" checked required>
+							<label for="consent" class="checkbox"></label>
+						</div>
+						<label for="consent">I consent to having this website store my information in order to respond to my inquiry.</label>
+					</div>
+				
+					<div class="capcha-wrapper">
+						<img src="img/capcha.png" alt="">
+					</div>
+				
+					<button type="submit" class="button">Submit</button>
 				</form>
+				
 
 			</div>
 		  </section>
 		  <!-- end register section -->
 
+		  <!-- start footer -->
+		  <footer class="footer">
+			<div class="container-fluid">
+
+				<div class="footer__menu">
+					<a href="" class="footer-link">
+						Privacy Policy
+					</a>
+					<a href="" class="footer-link">
+						Terms & Conditions
+					</a>
+				</div>
+
+				<div class="copy">
+					© 2024 Gateway Gulf Investor Forum. All rights reserved. 
+				</div>
+
+				<div class="footer-social">
+					<a href="https://www.linkedin.com/showcase/gateway-gulf-forum" class="header__social-link" target="_blank">
+						<img src="img/linkedin.svg" alt="">
+					</a>
+	
+					<a href="https://www.linkedin.com/showcase/gateway-gulf-forum" class="header__social-link" target="_blank">
+						<img src="img/twitter.svg" alt="">
+					</a>
+	
+					<a href="https://www.linkedin.com/showcase/gateway-gulf-forum" class="header__social-link" target="_blank">
+						<img src="img/instagram.svg" alt="">
+					</a>
+	
+					<a href="https://www.linkedin.com/showcase/gateway-gulf-forum" class="header__social-link" target="_blank">
+						<img src="img/facebook.svg" alt="">
+					</a>
+	
+				</div>
+
+			</div>
+		  </footer>
+		  <!-- end footer -->
+
 		
 
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
-	
+	<script>
+		document.addEventListener("scroll", function() {
+    const scrollPosition = window.scrollY;
+
+    // Двигаем треугольники в зависимости от прокрутки
+    const triangle1 = document.querySelector('.triangle1');
+    const triangle2 = document.querySelector('.triangle2');
+
+    if (triangle1) {
+        triangle1.style.transform = `translateY(${scrollPosition * 0.2}px)`;
+    }
+
+    if (triangle2) {
+        triangle2.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+    }
+});
+
+	</script>
+
 </body>
 </html>

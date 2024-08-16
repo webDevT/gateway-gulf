@@ -37,6 +37,10 @@ body
     text-decoration: none
     padding: 16px 23px
     border-radius: 4px
+    font-size: 14px 
+    font-family: $secondary-font
+    font-weight: 700
+    text-transform: uppercase
 .button:hover 
     color: #fff 
     text-decoration: none 
@@ -167,6 +171,8 @@ body
     background: #44505E
     color: #fff 
     outline: none
+    padding-left: 18px 
+    padding-right: 18px
 
 .form-row
     display: flex
@@ -181,8 +187,90 @@ body
     width: 360px
 .input-item
     margin-bottom: 30px
+.select 
+    background-image: url('../img/down.svg')
+    background-repeat: no-repeat 
+    background-position: right 20px center
+.select
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+.select::-ms-expand
+    display: none
+.input-checkbox
+    display: none
+.checkbox
+    width: 20px 
+    height: 20px
+    border: 2px solid $gold 
+    border-radius: 4px
+.checkbox-wrapper
+    width: 20px 
+    height: 20px 
+    margin-right: 11px
+.checkbox-row
+    display: flex 
+    justify-content: center
+    align-items: center
+    position: relative
+    top: 2.5px
+.checkbox
+    cursor: pointer
+.input-checkbox:checked + .checkbox 
+    background: url('../img/check.svg')
+    background-repeat: no-repeat
+    background-position: center
+.capcha-wrapper
+    display: flex 
+    justify-content: center 
+    align-items: center
+    margin-top: 35px
+    margin-bottom: 35px
+.form
+    .button 
+        width: 168px 
+        border: none 
+        outline: none
 //end form style 
 
+//start footer style 
+.footer
+    background: $gold
+    padding-top: 60px 
+    padding-bottom: 60px
+    font-size: 14px
+    .container-fluid 
+        display: flex 
+        justify-content: space-between 
+        align-items: center
+.footer-social
+    display: flex 
+    align-items: center
+    .header__social-link
+        margin-left: 8px 
+        margin-bottom: 0
+.footer-link,
+.footer-link:hover
+    color: #fff
+    text-decoration: none
+.footer-link
+    margin-right: 20px
+//end footer style
+.join-us,
+.who-meet
+    position: relative
+.triangle
+    position: absolute
+    width: 317px
+    opacity: 0.8
+    transition: transform 0.5s ease-out
+    pointer-events: none
+.triangle1
+    top: -450px
+    left: 0px
+.triangle2
+    top: 0px
+    right: 0px
 @import "media"
 
 
