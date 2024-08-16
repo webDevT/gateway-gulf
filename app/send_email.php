@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Port = 587;
 
         $mail->setFrom('your_temp_email@gmail.com', 'Your Name');
-        $mail->addAddress('karinadesyatnik27@gmail.com', 'Recipient Name');
+        $mail->addAddress('your_temp_email@gmail.com', 'Recipient Name');
 
         $mail->Subject = 'New Form Submission';
 
