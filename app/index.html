@@ -306,7 +306,7 @@ REGION
 					</p>
 				</div>
 
-				<form action="send_email.php" method="POST" class="form">
+				<form class="form" id="contactForm">
 					<div class="form-row">
 						<div class="form-col">
 							<div class="input-item">
@@ -356,9 +356,9 @@ REGION
 					</div>
 				
 					<button type="submit" class="button">Submit</button>
+					<div id="message" class="form-status"></div>
 				</form>
 				
-
 			</div>
 		  </section>
 		  <!-- end register section -->
@@ -425,6 +425,28 @@ REGION
 });
 
 	</script>
+
+<script>
+	
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var formData = new FormData(this);
+            fetch('send_email.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                var messageDiv = document.getElementById('message');
+                messageDiv.innerHTML = `<p>${data.message}</p>`;
+                messageDiv.style.color = data.success ? 'green' : 'red';
+				messageDiv.style.borderColor = data.success ? 'green' : 'red';
+            })
+            .catch(error => console.error('Error:', error));
+        });
+   
+</script>
 
 </body>
 </html>
