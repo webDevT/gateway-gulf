@@ -1,0 +1,189 @@
+@import "vars"
+@import "fonts"
+
+//start global style 
+body 
+    background: $main-color
+    color: #fff
+    font-family: $main-font
+    font-size: 16px
+.container-fluid 
+    width: 1200px 
+    max-width: 90%
+    padding-left: 0 
+    padding-right: 0
+.h1 
+    text-align: center
+    font-size: 70px
+    line-height: 1.2
+    font-weight: 500
+    span 
+        display: block
+        font-weight: 700
+        color: $gold
+.h2 
+    font-size: 40px 
+    font-weight: 600
+    font-family: $secondary-font
+    border-bottom: 4px solid #B19861
+.button 
+    margin-left: auto 
+    margin-right: auto
+    display: flex 
+    justify-content: center 
+    align-items: center
+    background: #ED1A39
+    color: #fff 
+    text-decoration: none
+    padding: 16px 23px
+    border-radius: 4px
+.button:hover 
+    color: #fff 
+    text-decoration: none 
+.section
+    padding-top: 80px 
+    padding-bottom: 80px  
+.section-header
+    text-align: center 
+    width: 654px 
+    max-width: 100%
+    margin-left: auto 
+    margin-right: auto
+    margin-bottom: 35px
+    .h2 
+        margin-bottom: 35px
+//end global style
+
+//start header style 
+.header
+    position: absolute
+    top: 0 
+    left: 0 
+    width: 100%
+    padding-top: 48px
+    .container-fluid 
+        display: flex 
+        justify-content: space-between
+.header__social-link
+    display: block 
+    text-decoration: none
+    margin-bottom: 7px
+    img 
+        width: 27px 
+        height: 27px
+//end header style
+
+//start main screen style 
+.main-screen
+    min-height: 100vh 
+    padding-top: 200px 
+    padding-bottom: 200px
+    background: url('../img/main-bg.png')
+    background-size: cover
+    background-position: center
+    display: flex 
+    align-items: center 
+    justify-content: center
+    text-align: center      
+//end main screen style
+
+//start why now style 
+.section
+    .col-lg-4 
+        margin-top: 30px
+.learn-more-container
+    display: flex 
+    flex-direction: column
+    align-items: center
+.cover 
+    width: 176px
+    margin-bottom: 17px 
+    display: block
+.learn-more__title
+    font-size: 20px 
+    font-weight: 600 
+    font-family: $secondary-font 
+    margin-bottom: 24px
+//end why now style
+
+//start what is style
+.what-is__item
+    background: $aqua
+    text-align: center
+    font-size: 18px
+    padding: 30px 18px
+    margin-bottom: 30px
+    img 
+        display: block 
+        margin-bottom: 10px
+        margin-left: auto 
+        margin-right: auto
+//end what is style
+
+//start who meet style
+.who-meet__item
+    width: 237px 
+    margin-left: auto 
+    margin-right: auto
+    text-align: center
+    margin-top: 50px
+    img 
+        margin-bottom: 30px 
+        display: block 
+        margin-left: auto 
+        margin-right: auto
+//end who meet style
+
+//start about style
+.about 
+    p 
+        margin-top: 30px
+//end about style
+
+//start parallax section style
+.parallax-section
+    position: relative
+    height: 620px
+    overflow: hidden
+.parallax-image
+    background-image: url('../img/video.png')
+    height: 100%
+    background-attachment: fixed
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+//end parallax section style
+
+//start form style 
+.label 
+    display: block
+.input,
+.select
+    display: block
+    width: 100%
+    height: 50px 
+    border-radius: 10px 
+    border: 2px solid $gold
+    background: #44505E
+    color: #fff 
+    outline: none
+
+.form-row
+    display: flex
+    justify-content: space-between
+.form 
+    width: 839px 
+    max-width: 100%
+    margin-left: auto 
+    margin-right: auto
+.form-col
+    max-width: 48%
+    width: 360px
+.input-item
+    margin-bottom: 30px
+//end form style 
+
+@import "media"
+
+
+
